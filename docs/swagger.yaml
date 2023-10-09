@@ -163,7 +163,7 @@ paths:
       summary: Send Info Register
       tags:
       - Register
-  /advance-filter/:
+  /advance-filter/filter:
     post:
       consumes:
       - application/json
@@ -185,7 +185,7 @@ paths:
       summary: Advance Filter
       tags:
       - Advance Filter
-  /basic-query/:
+  /basic-query/query:
     post:
       consumes:
       - application/json

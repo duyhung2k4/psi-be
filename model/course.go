@@ -19,7 +19,6 @@ type Course struct {
 	Id        uint        `json:"id" gorm:"primaryKey"`
 	CreatorId uint        `json:"creatorId"`
 	Name      string      `json:"name"`
-	Title     string      `json:"title"`
 	Code      string      `json:"code" gorm:"unique"`
 	Type      COURSE_TYPE `json:"type"`
 	Detail    string      `json:"detail"`

@@ -152,7 +152,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/advance-filter/": {
+        "/advance-filter/filter": {
             "post": {
                 "description": "Advance Filter",
                 "consumes": [
@@ -186,7 +186,7 @@ const docTemplate = `{
                 }
             }
         },
-        "/basic-query/": {
+        "/basic-query/query": {
             "post": {
                 "description": "Basic query",
                 "consumes": [

@@ -145,7 +145,7 @@
                 }
             }
         },
-        "/advance-filter/": {
+        "/advance-filter/filter": {
             "post": {
                 "description": "Advance Filter",
                 "consumes": [
@@ -179,7 +179,7 @@
                 }
             }
         },
-        "/basic-query/": {
+        "/basic-query/query": {
             "post": {
                 "description": "Basic query",
                 "consumes": [

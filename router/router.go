@@ -60,16 +60,16 @@ func Router() http.Handler {
 			// protected.Use(jwtauth.Verifier(config.GetJWT()))
 			// protected.Use(jwtauth.Authenticator)
 
-			r.Route("/access-protected", func(aProtected chi.Router) {
+			protected.Route("/access-protected", func(aProtected chi.Router) {
 				aProtected.Post("/login-token", accessControler.LoginWithToken)
 			})
 
 			protected.Route("/basic-query", func(basicQueryR chi.Router) {
-				basicQueryR.Post("/", basicQueryController.BasicQuery)
+				basicQueryR.Post("/query", basicQueryController.BasicQuery)
 			})
 
 			protected.Route("/advance-filter", func(advanceFilterR chi.Router) {
-				advanceFilterR.Post("/", advanceFilterController.AdvanceFilter)
+				advanceFilterR.Post("/filter", advanceFilterController.AdvanceFilter)
 			})
 
 		})

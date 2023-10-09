@@ -24,7 +24,7 @@ type AdvanceFilterController interface {
 // @Produce      json
 // @Param        req   body model.AdvanceFilterPayload true "payload"
 // @Success      200  {object}  Response
-// @Router       /advance-filter/ [post]
+// @Router       /advance-filter/filter [post]
 func (a *advanceFilterController) AdvanceFilter(w http.ResponseWriter, r *http.Request) {
 	var payload model.AdvanceFilterPayload
 	if err := json.NewDecoder(r.Body).Decode(&payload); err != nil {

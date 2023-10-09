@@ -24,7 +24,7 @@ type BasicQueryController interface {
 // @Produce      json
 // @Param        req   body model.BasicQueryPayload true "payload"
 // @Success      200  {object}  Response
-// @Router       /basic-query/ [post]
+// @Router       /basic-query/query [post]
 func (b *basicQueryController) BasicQuery(w http.ResponseWriter, r *http.Request) {
 	var payload model.BasicQueryPayload
 
