@@ -2,6 +2,7 @@ package model
 
 var MODEL_TYPE = map[string]interface{}{
 	"profile":                   Profile{},
+	"profileCourse":             ProfileCourse{},
 	"credential":                Credential{},
 	"role":                      Role{},
 	"temporaryCredential":       TemporaryCredential{},
@@ -20,6 +21,7 @@ var MODEL_TYPE = map[string]interface{}{
 
 var LIST_MODEL_TYPE = map[string]interface{}{
 	"profile":                   []Profile{},
+	"profileCourse":             []ProfileCourse{},
 	"credential":                []Credential{},
 	"role":                      []Role{},
 	"temporaryCredential":       []TemporaryCredential{},

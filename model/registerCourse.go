@@ -10,8 +10,7 @@ type STATUS_REGISTER string
 
 const (
 	REGISTER_PENDING  STATUS_REGISTER = "pending"
-	REGISTER_ACCEPTED STATUS_REGISTER = "accpeted"
-	REGISTER_CANCELED STATUS_REGISTER = "canceled"
+	REGISTER_ACCEPTED STATUS_REGISTER = "accepted"
 )
 
 type RegisterCourse struct {

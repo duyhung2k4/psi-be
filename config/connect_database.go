@@ -46,13 +46,16 @@ func connect(migrate bool) (*gorm.DB, error) {
 			&model.Subject12{},
 			&model.Subject12Course{},
 			&model.Major{},
+
 			&model.MajorCourse{},
 			&model.LanguageCertificate{},
 			&model.LanguageCertificateCourse{},
 			&model.Skill{},
+
 			&model.SkillCourse{},
 			&model.SaveCourse{},
 			&model.RegisterCourse{},
+			&model.ProfileCourse{},
 		)
 
 		if err != nil {
