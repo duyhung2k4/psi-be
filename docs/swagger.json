@@ -256,6 +256,9 @@
                     "type": "object",
                     "additionalProperties": true
                 },
+                "isPreload": {
+                    "type": "boolean"
+                },
                 "modelType": {
                     "type": "string"
                 },
@@ -264,6 +267,12 @@
                 },
                 "pageSize": {
                     "type": "integer"
+                },
+                "stringPreLoad": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             }
         },

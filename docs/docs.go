@@ -263,6 +263,9 @@ const docTemplate = `{
                     "type": "object",
                     "additionalProperties": true
                 },
+                "isPreload": {
+                    "type": "boolean"
+                },
                 "modelType": {
                     "type": "string"
                 },
@@ -271,6 +274,12 @@ const docTemplate = `{
                 },
                 "pageSize": {
                     "type": "integer"
+                },
+                "stringPreLoad": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
                 }
             }
         },

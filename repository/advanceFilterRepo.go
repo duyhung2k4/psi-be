@@ -37,15 +37,21 @@ func (a *advanceFilterRepo) AdvanceFilter(payload model.AdvanceFilterPayload) (i
 
 	err := a.db.Transaction(func(tx *gorm.DB) error {
 		if err := tx.Model(model.MODEL_TYPE[payload.ModelType]).
-			Preload(clause.Associations).
 			Clauses(conditions).
 			Count(&total).Error; err != nil {
 			return err
 		}
 
-		if err := tx.Model(model.MODEL_TYPE[payload.ModelType]).
-			Preload(clause.Associations).
-			Clauses(conditions).
+		q := tx.Model(model.MODEL_TYPE[payload.ModelType])
+
+		if payload.IsPreload {
+			q.Preload(clause.Associations)
+			for _, s := range payload.StringPreLoad {
+				q.Preload(s)
+			}
+		}
+
+		if err := q.Clauses(conditions).
 			Limit(payload.PageSize).
 			Offset((payload.Page - 1) * payload.PageSize).
 			Find(&dataQuery).Error; err != nil {
